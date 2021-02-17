@@ -7,6 +7,7 @@ Build a dynamic web application with a MVC architecture.
 
 - Keep your code clean.
   - Use the reformat feature early and often!
+  
   - Use proper naming conventions.
   - Make clear and concise names for methods and variables.
   - Use OOP principles.
