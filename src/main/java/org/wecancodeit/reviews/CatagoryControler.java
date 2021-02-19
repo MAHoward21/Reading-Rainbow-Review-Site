@@ -14,6 +14,7 @@ public class CatagoryControler {
     @RequestMapping("/single-catagory")
     public String displaySingleCatagory (Model model) {
         Catagory sampleCatagory = new Catagory("Kids books", "The books you read to kids who cant talk");
+
         model.addAttribute("catagory", sampleCatagory);
 
 
