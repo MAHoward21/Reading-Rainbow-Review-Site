@@ -39,17 +39,17 @@
     <div class="container">
 <header>
     <h1>
-You can find here list of our Mystery books.
+    Below you can find a review on one of our books.
     </h1>
 </header>
 <main>
-   <h2 th:text="${Sherlock Holmes by Arthur Conan Doyle.}"></h2>
-   <img src=""alt="Cover Picture">
-
- <p>
+    <h2 th:text="${review.reviewTitle}">Sherlock Holmes</h2>
+    <h3 th:text="${review.reviewAuthor}">Sir Arthur Conan Doyle</h3>
+    <img th:src="${review.reviewImage}" src="http://placekitten.com/200/300" alt="Cover Picture" />
+    <p th:text="${review.body}">
      REVIEW OF THE BOOK.
  </p>
- <a href="./MYSTERY.html">Back to Mystery</a>
+    <a th:href=" '/catogoires/'+${review.catogory.name}  href="./MYSTERY.html">Back to <span th:text="${review.name}"> Mystery</span></a>
 </main>
 <footer><small>&copy2021</small></footer>
     </div>
