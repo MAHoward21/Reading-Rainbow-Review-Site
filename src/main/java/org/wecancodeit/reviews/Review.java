@@ -5,8 +5,8 @@ public class Review {
     private String reviewTitle;
     private String reviewAuthor;
     private String reviewImage;
-    private String body;
     private Catagory catagory;
+    private String body;
 
 
 

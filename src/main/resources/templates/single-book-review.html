@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Sherlock Holmes Review Page</title>
+    <title th:text="${review.reviewTitle}" > Sherlock Holmes Review Page</title>
     <link rel="stylesheet" href="./css/sherlock-holmes-reveiw-page-style.css">
     <link rel="stylesheet" href="./css/sherlock-holmes-review-page-layout.css">
 </head>
@@ -49,7 +49,8 @@
     <p th:text="${review.body}">
      REVIEW OF THE BOOK.
  </p>
-    <a th:href=" '/catogoires/'+${review.catogory.name}  href="./MYSTERY.html">Back to <span th:text="${review.name}"> Mystery</span></a>
+    <a  th:href="'/catagories/'+${review.catagory.name}"
+        href=" ./MYSTERY.html">Back to<span th:text="${review.catagory.name}">Mystery</span></a>
 </main>
 <footer><small>&copy2021</small></footer>
     </div>
