@@ -1,22 +1,13 @@
 package org.wecancodeit.reviews;
 
-
 import org.springframework.stereotype.Service;
-//Store Review objects
-//Provide a way to save new reviews
-//Provide a way to retrieve reviews
-//Provide error handling
-
 
 @Service
-public class ReviewStorage {
-
-
+public class CatagoryStorage {
     private Catagory sampleCatagory;
     private Review sample;
 
-
-    public ReviewStorage() {
+    public CatagoryStorage() {
         sampleCatagory = new Catagory("Kids books", "The books you read to kids who cant talk");
         sample = new Review("Where is Spot?", "Eric Hill", "https://target.scene7.com/is/image/Target/GUEST_5d5829f2-b8f2-4e6a-a4e2-c930457cff1d?wid=488&hei=488&fmt=pjpeg",
                 sampleCatagory,
@@ -24,7 +15,6 @@ public class ReviewStorage {
     }
 
 
-    public Review getSample() {
-        return sample;
-    }
 }
+
+

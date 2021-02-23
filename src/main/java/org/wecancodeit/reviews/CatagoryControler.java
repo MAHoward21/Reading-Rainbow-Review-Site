@@ -11,6 +11,15 @@ public class CatagoryControler {
     // 2. Find the data for the View
     // 3. Add the data to the Model objects
     // 4. Select the template to be displayed
+
+
+
+    public CatagoryControler(CatagoryStorage catagoryStorage){
+
+
+    }
+
+
     @RequestMapping("/single-catagory")
     public String displaySingleCatagory (Model model) {
         Catagory sampleCatagory = new Catagory("Kids books", "The books you read to kids who cant talk");
