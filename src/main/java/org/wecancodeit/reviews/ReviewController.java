@@ -10,6 +10,7 @@ public class ReviewController {
     private ReviewStorage reviewStorage;
     // 1. Provide mapping for methods
     // 2. Find the data for the View
+    // 3. Add the data to the Model objects
     // 4. Select the template to be displayed
 
 
@@ -20,9 +21,11 @@ public class ReviewController {
         // 2 ^^
     }
 
+
+
+
     @RequestMapping ("/single-book-review") //1
-    // 3. Add the data to the Model objects
-    public String displaySingleBookReview (Model model) {
+    public String displaySigleBookReview (Model model) {
 
         model.addAttribute("review", reviewStorage.getSample()); //3
 
