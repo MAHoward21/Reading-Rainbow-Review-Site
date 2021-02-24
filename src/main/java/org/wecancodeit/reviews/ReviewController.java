@@ -3,6 +3,7 @@ package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -24,10 +25,10 @@ public class ReviewController {
 
 
 
-    @RequestMapping ("/single-book-review") //1
-    public String displaySigleBookReview (Model model) {
+    @RequestMapping ("/reviews/{title}") //1
+    public String displaySigleBookReview (@PathVariable String title, Model model) {
 
-        model.addAttribute("review", reviewStorage.getSample()); //3
+        model.addAttribute("review", reviewStorage.getSampleByTitle(title)); //3
 
         return "single-book-review"; //4
     }

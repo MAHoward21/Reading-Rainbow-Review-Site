@@ -34,7 +34,7 @@ public class ReviewStorage {
     }
 
 
-    public Review getSamplebyTitle(String title) {
+    public Review getSampleByTitle(String title) {
         return reviews.get(title);
     }
 }
