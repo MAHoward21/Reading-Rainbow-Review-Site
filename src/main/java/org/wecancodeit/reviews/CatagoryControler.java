@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class CatagoryControler {
+    private CatagoryStorage catagoryStorage;
+
     // 1. Provide mapping for methods
     // 2. Find the data for the View
     // 3. Add the data to the Model objects
@@ -17,6 +19,7 @@ public class CatagoryControler {
     public CatagoryControler(CatagoryStorage catagoryStorage){
 
 
+        this.catagoryStorage = catagoryStorage;
     }
 
 
@@ -24,7 +27,7 @@ public class CatagoryControler {
     public String displaySingleCatagory (Model model) {
         Catagory sampleCatagory = new Catagory("Kids books", "The books you read to kids who cant talk");
 
-        model.addAttribute("catagory", sampleCatagory);
+        model.addAttribute("catagory", catagoryStorage.getSample());
 
 
         return "single-catagory";
