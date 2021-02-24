@@ -3,6 +3,7 @@ package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -23,11 +24,11 @@ public class CatagoryControler {
     }
 
 
-    @RequestMapping("/single-catagory")
-    public String displaySingleCatagory (Model model) {
+    @RequestMapping("/Catagory/{name}")
+    public String displaySingleCatagory (@PathVariable String name, Model model) {
         Catagory sampleCatagory = new Catagory("Kids books", "The books you read to kids who cant talk");
 
-        model.addAttribute("catagory", catagoryStorage.getSample());
+        model.addAttribute("catagory", catagoryStorage.getSample(name));
 
 
         return "single-catagory";
