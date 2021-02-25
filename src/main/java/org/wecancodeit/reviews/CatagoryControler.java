@@ -24,7 +24,7 @@ public class CatagoryControler {
     }
 
 
-    @RequestMapping("/Catagory/{name}")
+    @RequestMapping("/catagory/{name}")
     public String displaySingleCatagory (@PathVariable String name, Model model) {
         Catagory sampleCatagory = new Catagory("Kids books", "The books you read to kids who cant talk");
 

@@ -3,6 +3,8 @@ package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 //Store Review objects
@@ -37,4 +39,10 @@ public class ReviewStorage {
     public Review getSampleByTitle(String title) {
         return reviews.get(title);
     }
+//    public Collection<Review> getReviewsByCatagory(String catagory){
+//        ArrayList<Review> reviews = new ArrayList<>();
+//        return this.reviews
+//        return reviews;
+// TODO: 2/25/2021 Figure out how to search our collection by category 
+//    }
 }
