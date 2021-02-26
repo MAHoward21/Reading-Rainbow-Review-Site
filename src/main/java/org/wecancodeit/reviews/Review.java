@@ -49,7 +49,7 @@ public class Review {
 //        return reviewImage;
 //    }
 
-//        public Category getCatagory () {
+//        public Category getCategory () {
 //        return category;
 //    }
 
