@@ -15,7 +15,7 @@ public class Book {
     @OneToMany(mappedBy = "book")
     private Collection<Review> reviews;
 
-    @ManyToMany(mappedBy = "book")
+    @ManyToMany(mappedBy = "books")
     private Collection<Category> genres;
 
     private String bookTitle;
@@ -34,5 +34,15 @@ public class Book {
     protected Book(){}
 
 
+    public String getBookTitle() {
+        return bookTitle;
+    }
 
+    public String getBookAuthor() {
+        return bookAuthor;
+    }
+
+    public String getCoverArt() {
+        return coverArt;
+    }
 }
