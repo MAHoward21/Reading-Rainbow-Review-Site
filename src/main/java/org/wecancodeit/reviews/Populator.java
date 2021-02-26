@@ -8,10 +8,13 @@ import org.springframework.stereotype.Component;
 public class Populator implements CommandLineRunner {
 
     private ReviewStorage reviewStorage;
+    private CatagoryStorage catagoryStorage;
 
-    public Populator(ReviewStorage reviewStorage){
+
+    public Populator(ReviewStorage reviewStorage, CatagoryStorage catagoryStorage){
 
         this.reviewStorage = reviewStorage;
+        this.catagoryStorage = catagoryStorage;
     }
 
     @Override
