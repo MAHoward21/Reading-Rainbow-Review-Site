@@ -7,8 +7,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class CatagoryControler {
-    private CatagoryStorage catagoryStorage;
+public class CategoryController {
+
+
+
+    private CategoryStorage categoryStorage;
 
     // 1. Provide mapping for methods
     // 2. Find the data for the View
@@ -16,21 +19,20 @@ public class CatagoryControler {
     // 4. Select the template to be displayed
 
 
+    public CategoryController(CategoryStorage categoryStorage) {
 
-    public CatagoryControler(CatagoryStorage catagoryStorage){
 
-
-        this.catagoryStorage = catagoryStorage;
+        this.categoryStorage = categoryStorage;
     }
 
 
-    @RequestMapping("/catagory/{name}")
-    public String displaySingleCatagory (@PathVariable String name, Model model) {
+    @RequestMapping("/category/{name}")
+    public String displaySingleCategory(@PathVariable String name, Model model) {
         Category sampleCategory = new Category("Kids books", "The books you read to kids who cant talk");
 
-        model.addAttribute("catagory", catagoryStorage.getSample(name));
+        model.addAttribute("category", categoryStorage.getSample(name));
 
 
-        return "single-catagory";
+        return "single-category";
     }
 }

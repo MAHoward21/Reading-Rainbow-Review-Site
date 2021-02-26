@@ -6,28 +6,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class CatagoryStorage {
+public class CategoryStorage {
     private Category sampleCategory;
     private Review sample;
 
-    Map<String, Category> catagories;
+    Map<String, Category> categories;
 
-    public CatagoryStorage() {
-        catagories = new HashMap<>();
+    public CategoryStorage() {
+        categories = new HashMap<>();
 
         Category sampleCategory = new Category("Kids books", "The books you read to kids who cant talk");
 
-        catagories.put(sampleCategory.getName(), sampleCategory);
+        categories.put(sampleCategory.getName(), sampleCategory);
     }
 
-    public void saveCatagory(Category category){
-        catagories.put(category.getName(), category);
+    public void saveCategory(Category category){
+        categories.put(category.getName(), category);
     }
 
 
 
     public Category getSample(String name) {
-        return catagories.get(name);
+        return categories.get(name);
     }
 }
 
