@@ -18,6 +18,14 @@ public class Category {
     @ManyToMany
     private Collection<Book> books;
 
+    public Collection<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(Collection<Book> books) {
+        this.books = books;
+    }
+
     private String name;
     private String description;
 //    Collection<Review> reviews;
