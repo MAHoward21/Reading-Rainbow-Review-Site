@@ -39,12 +39,14 @@
                 </header>
                 <main>
                     <h2>
-                        <h2 th:text="${catagory.name}">Mystery</h2>
-                        <h2 th:text="${catagory.description}">Catagory description</h2>
+                        <h2 th:text="${category.catagoryName}">Sherlock Holmes</h2>
+                        <h3 th:text="${category.catagoryAuthor}">Sir Arthur Conan Doyle</h3>
+                        <h2 th:text="${category.catagoryDescription}">This book description</h2>
 
                     </h2>
                     <ul>
-<!--                        <li><a th:href="'/reviews/'+ ./SherlockHolmes.html">Sherlock Holmes</a></li>-->
+                        <li><a href="./Sherlock Holmes.html">Sherlock Holmes</a></li>
+                        <li><a href="./NancyDrew.html">Nancy Drew</a></li>
                     </ul>
                     <!-- <a href="./HOMEPAGE.html">Back to Home Page</a> -->
                 </main>

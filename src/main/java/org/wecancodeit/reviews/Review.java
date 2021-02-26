@@ -1,20 +1,39 @@
 package org.wecancodeit.reviews;
 
+
+import javax.persistence.*;
+
+@Entity
 public class Review {
+
+    @Id
+    @GeneratedValue
+    private long id;
+
+    @ManyToOne
+    private Book book;
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
 
     private String reviewTitle;
     private String reviewAuthor;
-    private String reviewImage;
-    private Catagory catagory;
+//    private String reviewImage;
+//    private Category category;
     private String body;
 
+    protected Review(){}
 
-
-    public Review(String reviewTitle, String reviewAuthor, String reviewImage, Catagory catagory, String body) {
+    public Review(String reviewTitle, String reviewAuthor, String reviewImage, Category category, String body) {
         this.reviewTitle = reviewTitle;
         this.reviewAuthor = reviewAuthor;
-        this.reviewImage = reviewImage;
-        this.catagory = catagory;
+//        this.reviewImage = reviewImage;
+//        this.category = category;
         this.body = body;
     }
 
@@ -26,13 +45,13 @@ public class Review {
         return reviewAuthor;
     }
 
-        public String getReviewImage () {
-        return reviewImage;
-    }
+//        public String getReviewImage () {
+//        return reviewImage;
+//    }
 
-        public Catagory getCatagory () {
-        return catagory;
-    }
+//        public Category getCatagory () {
+//        return category;
+//    }
 
     public String getBody() {
         return body;

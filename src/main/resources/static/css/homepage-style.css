@@ -1,7 +1,9 @@
-.top__page{
-    background-color: #ffffff6b;
-    
-}
 body{
-    background-image: url(/src/main/resources/static/image/color\ palet.png)
+    /* background-image: url(/src/main/resources/static/image/color\ palet.png) */
+    background-color: #335c67;
+}
+
+.main{
+    background-color: rgba(0, 0, 0, 0.200);
+    color: #37123c
 }
