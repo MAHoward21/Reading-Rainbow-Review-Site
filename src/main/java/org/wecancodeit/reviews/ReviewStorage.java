@@ -16,10 +16,7 @@ import java.util.Map;
 @Service
 public class ReviewStorage {
 
-
-
     Map<String, Review> reviews;
-
 
     public ReviewStorage(){
         reviews = new HashMap<>();
@@ -43,6 +40,6 @@ public class ReviewStorage {
 //        ArrayList<Review> reviews = new ArrayList<>();
 //        return this.reviews
 //        return reviews;
-// TODO: 2/25/2021 Figure out how to search our collection by category 
+// TODO: 2/25/2021 Figure out how to search our collection by category
 //    }
 }
