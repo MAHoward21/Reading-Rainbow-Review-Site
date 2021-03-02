@@ -28,7 +28,7 @@ public class ReviewController {
     @RequestMapping ("/reviews/{title}") //1
     public String displaySingleBookReview (@PathVariable String title, Model model) {
 
-        model.addAttribute("review", reviewStorage.getSampleByTitle(title)); //3
+//        model.addAttribute("review", reviewStorage.getReviewByTitle(title)); //3
 
         return "single-book-review"; //4
     }
