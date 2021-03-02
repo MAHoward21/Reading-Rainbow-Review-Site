@@ -17,13 +17,20 @@ public class Book {
     private Collection<Review> reviews = new ArrayList<Review>();
 
     @ManyToMany(mappedBy = "books")
-
     private Collection<Category> genres;
 
     private String bookTitle;
     private String bookAuthor;
     private String coverArt;
 
+
+    protected Book(){}
+
+    public Book(String title, String author, String cover) {
+        bookTitle = title;
+        bookAuthor = author;
+        coverArt = cover;
+    }
 
     public Collection<Review> getReviews() {
         return reviews;
@@ -33,13 +40,7 @@ public class Book {
         this.reviews = reviews;
     }
 
-    protected Book(){}
 
-    public Book(String title, String author, String cover) {
-        bookTitle = title;
-        bookAuthor = author;
-        coverArt = cover;
-    }
 
 
     public String getBookTitle() {
