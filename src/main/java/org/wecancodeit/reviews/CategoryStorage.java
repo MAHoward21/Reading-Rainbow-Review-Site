@@ -18,6 +18,11 @@ public class CategoryStorage {
 
     public void addCategory(Category category) {
         categories.save(category);
+
+    }
+
+    public Iterable<Category> getAllCategories() {
+        return categories.findAll();
     }
 }
 

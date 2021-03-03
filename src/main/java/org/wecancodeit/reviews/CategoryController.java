@@ -26,6 +26,9 @@ public class CategoryController {
     }
 
 
+
+
+
     @RequestMapping("/category/{name}")
     public String displaySingleCategory(@PathVariable String name, Model model) {
 
