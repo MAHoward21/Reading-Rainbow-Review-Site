@@ -12,10 +12,11 @@ public class Populator implements CommandLineRunner {
     private BookStorage bookStorage;
 
 
-    public Populator(ReviewStorage reviewStorage, CategoryStorage categoryStorage){
+    public Populator(ReviewStorage reviewStorage, CategoryStorage categoryStorage, BookStorage bookStorage){
 
         this.reviewStorage = reviewStorage;
         this.categoryStorage = categoryStorage;
+        this.bookStorage = bookStorage;
     }
 
     @Override
@@ -28,7 +29,7 @@ public class Populator implements CommandLineRunner {
     bookStorage.addBook(wheresSpot);
 
     Review harryPotterReview = new Review("This book is Good", "Jim Bob", "#", "kidsBooks", "This book is so good i laughed");
-    reviewStorage.saveReview(harryPotterReview);
+    reviewStorage.addReview(harryPotterReview);
 
     harryPotter.addReview(harryPotterReview);
 
@@ -43,7 +44,7 @@ public class Populator implements CommandLineRunner {
     Review kidsBooksReview = new Review("Where is Spot Really?", "Tony Stark", "#",
             "kidsBooks",  "This book has fun flaps to lift and lots of animals to name with you child. would suggest this book for colors and counting also.");
         // TODO: 3/2/2021 impliment repository data for book and category
-    reviewStorage.saveReview(kidsBooksReview);
+    reviewStorage.addReview(kidsBooksReview);
 
 //        System.out.println(reviewStorage.reviews);
     }

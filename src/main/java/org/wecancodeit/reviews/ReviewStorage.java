@@ -21,7 +21,7 @@ public class ReviewStorage {
       
     }
 
-    public void saveReview(Review review) { reviews.save(review);}
+    public void addReview(Review review) { reviews.save(review);}
 
 //    public Review getReviewByTitle(String title) {
 //        return reviews.get(title);
