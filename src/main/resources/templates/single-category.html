@@ -42,8 +42,8 @@
                         <h2 th:text="${category.description}">This is the category description</h2>
 
                     </h2>
-                    <ul>
-                        <li><a href="./CategoryController.displayCategoryById">Sherlock Holmes</a></li>
+                    <ul th:each ="hashtag: ${bookList}">
+                        <li><a href="./Sherlock Holmes.html">Sherlock Holmes</a></li>
                         <li><a href="./NancyDrew.html">Nancy Drew</a></li>
                     </ul>
                     <!-- <a href="./HOMEPAGE.html">Back to Home Page</a> -->
