@@ -29,11 +29,11 @@ public class CategoryController {
 
 
 
-    @RequestMapping("/category/{name}")
-    public String displaySingleCategory(@PathVariable String name, Model model) {
+    @RequestMapping("/category/{id}")
+    public String displaySingleCategory(@PathVariable Long id, Model model) {
 
 
-       // model.addAttribute("category", categoryStorage.getSample(name));
+        model.addAttribute("category", categoryStorage.getCategoryById(id));
 
 
         return "single-category";

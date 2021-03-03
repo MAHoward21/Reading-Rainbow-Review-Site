@@ -34,17 +34,16 @@
             <div class="container">
                 <header>
                     <h1>
-                        You can find here list of our Mystery books.
+                        You can find here our list of <span th:text="${category.name}"> Mystery</span> books.
                     </h1>
                 </header>
                 <main>
                     <h2>
-                        <h2 th:text="${category.name}">Genre</h2>
-                        <h2 th:text="${category.description}">This book description</h2>
+                        <h2 th:text="${category.description}">This is the category description</h2>
 
                     </h2>
                     <ul>
-                        <li><a href="./Sherlock Holmes.html">Sherlock Holmes</a></li>
+                        <li><a href="./CategoryController.displayCategoryById">Sherlock Holmes</a></li>
                         <li><a href="./NancyDrew.html">Nancy Drew</a></li>
                     </ul>
                     <!-- <a href="./HOMEPAGE.html">Back to Home Page</a> -->
