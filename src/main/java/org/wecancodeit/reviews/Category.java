@@ -46,6 +46,10 @@ public class Category {
         return description;
     }
 
+    public long getId() {
+        return id;
+    }
+
 //    public Collection<Review> getReviews() {
 //        return reviews;
 //    }

@@ -21,9 +21,6 @@
         <nav class="sidebar__navigation">
             <ul class="navigation__links">
                 <li class="navigation__link"><a href="./HOMEPAGE.html">Home</a></li>
-                <li class="navigation__link"><a href="./FANTASY.html">Fantasy</a></li>
-                <li class="navigation__link"><a href="./MYSTERY.html">Mystery</a></li>
-                <li class="navigation__link"><a href="./POETRY.html">Poetry</a></li>
             </ul>
         </nav>
 
@@ -34,18 +31,15 @@
 <div class="container">
     <header>
         <h1>
-            You can find here list of our Review Categories.
+            You can find here list of our Categories here.
         </h1>
     </header>
     <main>
-        <h2>
-            <h2 th:text="${category.name}">Genre</h2>
-            <h2 th:text="${category.description}">The categories description.</h2>
-        </h2>
-        <ul>
-            <li><a href="./MYSTERY.html">Mystery</a></li>
-            <li><a href="./FANTASY">Fantasy</a></li>
-            <li> <a href="/POETRY"> Poetry</a></li>
+        <ul th:each ="category: ${categories}">
+            <li><a th:href="'/category/'+ ${category.id}"><span th:text ="${category.name}">Not a category</span></a></li>
+<!--            <li><a href="./MYSTERY.html">Mystery</a></li>-->
+<!--            <li><a href="./FANTASY">Fantasy</a></li>-->
+<!--            <li> <a href="/POETRY"> Poetry</a></li>-->
         </ul>
         <!-- <a href="./HOMEPAGE.html">Back to Home Page</a> -->
     </main>

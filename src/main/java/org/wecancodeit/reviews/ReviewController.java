@@ -30,7 +30,7 @@ public class ReviewController {
 
 //        model.addAttribute("review", reviewStorage.getReviewByTitle(title)); //3
 
-        return "single-book-review"; //4
+        return "single-review"; //4
     }
 
 }

@@ -21,9 +21,6 @@
                 <nav class="sidebar__navigation">
                     <ul class="navigation__links">
                         <li class="navigation__link"><a href="./HOMEPAGE.html">Home</a></li>
-                        <li class="navigation__link"><a href="./FANTASY.html">Fantasy</a></li>
-                        <li class="navigation__link"><a href="./MYSTERY.html">Mystery</a></li>
-                        <li class="navigation__link"><a href="./POETRY.html">Poetry</a></li>
                     </ul>
                 </nav>
     
@@ -43,9 +40,9 @@
 
                     </h2>
                     <ul th:each ="book: ${category.books}">
-                        <li><span th:text="${book.title}">Not a Book</span>></li>
-                        <li><a href="./Sherlock Holmes.html">Sherlock Holmes</a></li>
-                        <li><a href="./NancyDrew.html">Nancy Drew</a></li>
+                        <li><span th:text="${book.bookTitle}">Not a Book</span></li>
+<!--                        <li><a href="./Sherlock Holmes.html">Sherlock Holmes</a></li>-->
+<!--                        <li><a href="./NancyDrew.html">Nancy Drew</a></li>-->
                     </ul>
                     <!-- <a href="./HOMEPAGE.html">Back to Home Page</a> -->
                 </main>
