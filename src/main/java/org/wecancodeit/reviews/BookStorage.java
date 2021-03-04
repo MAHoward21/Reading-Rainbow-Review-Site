@@ -16,4 +16,14 @@ public class BookStorage {
         books.save(book);
     }
 
+    public Book getBookById(Long id) {
+        if (books.findById(id).isPresent()) {
+            return books.findById(id).get();
+        }
+        else{
+            return null;
+        }
+
+    }
+
 }

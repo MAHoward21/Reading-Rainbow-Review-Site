@@ -13,33 +13,41 @@ import java.util.function.Consumer;
 
 @Service
 public class ReviewStorage {
-
     private ReviewRepository reviews;
 
-    public ReviewStorage(ReviewRepository reviews){
+    public ReviewStorage(ReviewRepository reviews) {
         this.reviews = reviews;
-      
+
     }
 
-    public void addReview(Review review) { reviews.save(review);}
+    public void addReview(Review review) {
+        reviews.save(review);
+    }
+
+    public Review getReviewById(Long id) {
+        if (reviews.findById(id).isPresent()) {
+            return reviews.findById(id).get();
+        } else {
+            return null;
 
 //    public Review getReviewByTitle(String title) {
 //        return reviews.get(title);
 //    }
 
-    public Collection<Review> getReviewsByCategory(String category){
-        ArrayList<Review> foundReviews = new ArrayList<>();
-        Optional<Review> tempReviewOptional;
-        Review tempReview = new Review();
-        for (long i=0; i == reviews.count(); i++) {
-            tempReviewOptional = reviews.findById(i);
-            tempReviewOptional.ifPresent((Consumer<? super Review>) (tempReview = tempReviewOptional.get()));
-
-            if (tempReview.getCategory() == category){
-                    foundReviews.add(tempReview);
-            }
-        }
-        return foundReviews;
+//    public Collection<Review> getReviewsByCategory(String category){
+//        ArrayList<Review> foundReviews = new ArrayList<>();
+//        Optional<Review> tempReviewOptional;
+//        Review tempReview = new Review();
+//        for (long i=0; i == reviews.count(); i++) {
+//            tempReviewOptional = reviews.findById(i);
+//            tempReviewOptional.ifPresent((Consumer<? super Review>) (tempReview = tempReviewOptional.get()));
+//
+//            if (tempReview.getCategory() == category){
+//                    foundReviews.add(tempReview);
+//            }
+//        }
+//        return foundReviews;
 //// TODO: 2/25/2021 Figure out how to search our collection by category
+        }
     }
 }

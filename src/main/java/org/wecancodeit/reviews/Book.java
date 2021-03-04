@@ -9,6 +9,8 @@ import java.util.Collection;
 public class Book {
 
 
+
+
     @Id
     @GeneratedValue
     private long id;
@@ -54,6 +56,7 @@ public class Book {
     public String getCoverArt() {
         return coverArt;
     }
+    public long getId() { return id; }
 
     public void addReview(Review reviewToAdd) {
         reviews.add(reviewToAdd);
