@@ -23,23 +23,45 @@ public class Populator implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 
-        Category fantasy = new Category("fantasy", "Books with magic and unicorns.");
+        Category fantasy = new Category("Fantasy", "Books with magic and unicorns.");
         Category kidsBooks = new Category("kidsbooks", "It's books about kid stuf.");
         Category mystery = new Category("mystery", "Books about some type of crime");
         Category poetry = new Category("poetry","Books about poetry");
+
+
+
+        Book harryPotter = new Book("Harry Potter", "JKR", "#");
+        harryPotter.getGenres().add(kidsBooks);
+        harryPotter.getGenres().add(fantasy);
+        bookStorage.addBook(harryPotter);
+        kidsBooks.getBooks().add(harryPotter);
+        fantasy.getBooks().add(harryPotter);
+
+        Book wheresSpot = new Book("Where's Spot", "Eric Hill", "https://target.scene7.com/is/image/Target/GUEST_5d5829f2-b8f2-4e6a-a4e2-c930457cff1d?wid=488&hei=488&fmt=pjpeg");
+        wheresSpot.getGenres().add(kidsBooks);
+        bookStorage.addBook(wheresSpot);
+        kidsBooks.getBooks().add(wheresSpot);
+
+        Book nancyDrew = new Book("Nancy Drew", "Carolyn Keene", "#");
+        nancyDrew.getGenres().add(kidsBooks);
+        nancyDrew.getGenres().add(mystery);
+        bookStorage.addBook(nancyDrew);
+        mystery.getBooks().add(nancyDrew);
+        kidsBooks.getBooks().add(nancyDrew);
+
+        Book whereTheSidewalkEnds = new Book("Where The Sidewalk Ends","Shel silverstein", "#");
+        whereTheSidewalkEnds.getGenres().add(poetry);
+        whereTheSidewalkEnds.getGenres().add(kidsBooks);
+        bookStorage.addBook(whereTheSidewalkEnds);
+        poetry.getBooks().add(whereTheSidewalkEnds);
+        kidsBooks.getBooks().add(whereTheSidewalkEnds);
+
         categoryStorage.addCategory(fantasy);
         categoryStorage.addCategory(kidsBooks);
         categoryStorage.addCategory(mystery);
         categoryStorage.addCategory(poetry);
 
-        Book harryPotter = new Book("Harry Potter", "JKR", "#");
-        bookStorage.addBook(harryPotter);
-        Book wheresSpot = new Book("Where's Spot", "Eric Hill", "https://target.scene7.com/is/image/Target/GUEST_5d5829f2-b8f2-4e6a-a4e2-c930457cff1d?wid=488&hei=488&fmt=pjpeg");
-        bookStorage.addBook(wheresSpot);
-        Book nancyDrew = new Book("Nancy Drew", "Carolyn Keene", "#");
-        bookStorage.addBook(nancyDrew);
-        Book whereTheSidewalkEnds = new Book("Where The Sidewalk Ends","Shel silverstein", "#");
-        bookStorage.addBook(whereTheSidewalkEnds);
+
 
         Review harryPotterReview = new Review("This book is Good", "Jim Bob", "#", "fantasy", "This book is so good I laughed");
         reviewStorage.addReview(harryPotterReview);
@@ -53,6 +75,7 @@ public class Populator implements CommandLineRunner {
         Review whereTheSideWalkEnds = new Review("such a pleasure to read this book!", "Jonny Bob", "#", "poetry", "Interesting book");
         reviewStorage.addReview(whereTheSideWalkEnds);
         whereTheSidewalkEnds.addReview(whereTheSideWalkEnds);
+
 
 
 

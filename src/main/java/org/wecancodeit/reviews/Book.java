@@ -17,7 +17,7 @@ public class Book {
     private Collection<Review> reviews = new ArrayList<Review>();
 
     @ManyToMany(mappedBy = "books")
-    private Collection<Category> genres;
+    private Collection<Category> genres = new ArrayList<Category>();
 
     private String bookTitle;
     private String bookAuthor;
@@ -57,5 +57,13 @@ public class Book {
 
     public void addReview(Review reviewToAdd) {
         reviews.add(reviewToAdd);
+    }
+
+    public Collection<Category> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(Collection<Category> genres) {
+        this.genres = genres;
     }
 }

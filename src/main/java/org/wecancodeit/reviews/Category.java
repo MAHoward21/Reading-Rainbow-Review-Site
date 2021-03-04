@@ -16,7 +16,7 @@ public class Category {
     private long id;
 
     @ManyToMany
-    private Collection<Book> books;
+    private Collection<Book> books = new ArrayList<Book>();
 
     public Collection<Book> getBooks() {
         return books;

@@ -11,7 +11,7 @@
         <div class="top__page">
             <header class="header">
                 <h1 class="header__title">
-                    Welcome to the Mystery Section!
+                    Welcome to the <span th:text="${category.name}">Mystery</span> Section!
                 </h1>
                 <img class="header__logo" src="./image/logo.png" />
     
@@ -42,7 +42,8 @@
                         <h2 th:text="${category.description}">This is the category description</h2>
 
                     </h2>
-                    <ul th:each ="hashtag: ${bookList}">
+                    <ul th:each ="book: ${category.books}">
+                        <li><span th:text="${book.title}">Not a Book</span>></li>
                         <li><a href="./Sherlock Holmes.html">Sherlock Holmes</a></li>
                         <li><a href="./NancyDrew.html">Nancy Drew</a></li>
                     </ul>
