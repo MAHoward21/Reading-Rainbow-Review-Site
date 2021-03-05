@@ -18,14 +18,15 @@ public class BookController {
     private BookStorage bookStorage;
 
 
-    public BookController(ReviewStorage reviewStorage) {
+    public BookController(ReviewStorage reviewStorage, BookStorage bookStorage) {
         this.reviewStorage = reviewStorage;
+        this.bookStorage = bookStorage;
     }
 
     @RequestMapping("/books/{id}")
     public String displaySingleBook(@PathVariable Long id, Model model) {
         model.addAttribute("review", reviewStorage.getReviewById(id));
-        model.addAttribute("book",  bookStorage.getBookById(id);
+        model.addAttribute("book",  bookStorage.getBookById(id));
         return "Single book";
     }
 // TODO: 3/4/2021  change .getReviewById(id) chang the key so that we can get a list of all the reviews

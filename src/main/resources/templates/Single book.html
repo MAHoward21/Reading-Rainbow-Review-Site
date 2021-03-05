@@ -34,19 +34,18 @@
 <div class="container">
     <header>
         <h1>
-             Review Author<span th:text="${review.reviewAuthor}"> </span>.
+             <span th:text="${book.bookTitle}">Book title goes here</span>
         </h1>
     </header>
     <main>
-        <h2>
-            <h2 th:text="${review.body}">This is the review</h2>
-
-        </h2>
+        <ul th:each="review : ${book.reviews}">
+            <li th:href="'/review/' + ${review.id}"><span th:text="${review.reviewTitle}">Not a review</span></li>
+        </ul>
 <!--        <ul th:each ="book: ${category.books}">-->
 <!--            <li><span th:text="${book.bookTitle}">Not a Book</span></li>-->
             <!--                        <li><a href="./Sherlock Holmes.html">Sherlock Holmes</a></li>-->
             <!--                        <li><a href="./NancyDrew.html">Nancy Drew</a></li>-->
-        </ul>
+        
         <!-- <a href="./HOMEPAGE.html">Back to Home Page</a> -->
     </main>
     <footer><small>&copy2021</small></footer>

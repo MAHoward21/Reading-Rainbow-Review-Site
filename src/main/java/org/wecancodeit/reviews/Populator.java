@@ -64,25 +64,34 @@ public class Populator implements CommandLineRunner {
 
 
         Review harryPotterReview = new Review("This book is Good", "Jim Bob", "#", "fantasy", "This book is so good I laughed");
+        harryPotterReview.addBook(harryPotter);
         reviewStorage.addReview(harryPotterReview);
         harryPotter.addReview(harryPotterReview);
+
         Review wheresSpotReview = new Review("Kids will like reading this book", "Jane Lee", "#", "kidsBooks", "amazing book");
+        wheresSpotReview.addBook(wheresSpot);
+
         reviewStorage.addReview(wheresSpotReview);
         wheresSpot.addReview(wheresSpotReview);
+
         Review nancyDrewReview = new Review("This book is great!", "Lee Bob", "#", "mystery", "My head still spinning from reading this book");
+        nancyDrewReview.addBook(nancyDrew);
         reviewStorage.addReview(nancyDrewReview);
         nancyDrew.addReview(nancyDrewReview);
-        Review whereTheSideWalkEnds = new Review("such a pleasure to read this book!", "Jonny Bob", "#", "poetry", "Interesting book");
-        reviewStorage.addReview(whereTheSideWalkEnds);
-        whereTheSidewalkEnds.addReview(whereTheSideWalkEnds);
+
+        Review whereTheSideWalkEndsReview = new Review("such a pleasure to read this book!", "Jonny Bob", "#", "poetry", "Interesting book");
+        whereTheSideWalkEndsReview.addBook(whereTheSidewalkEnds);
+        reviewStorage.addReview(whereTheSideWalkEndsReview);
+        whereTheSidewalkEnds.addReview(whereTheSideWalkEndsReview);
 
 
 
 
     Review kidsBooksReview = new Review("Where is Spot Really?", "Tony Stark", "#",
             "kidsBooks",  "This book has fun flaps to lift and lots of animals to name with you child. would suggest this book for colors and counting also.");
-        // TODO: 3/2/2021 impliment repository data for book and category
+    kidsBooksReview.addBook(wheresSpot);
     reviewStorage.addReview(kidsBooksReview);
+    wheresSpot.addReview(kidsBooksReview);
 
 //        System.out.println(reviewStorage.reviews);
     }

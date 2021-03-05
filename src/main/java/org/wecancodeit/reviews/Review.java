@@ -17,7 +17,7 @@ public class Review {
         return book;
     }
 
-    public void setBook(Book book) {
+    public void addBook(Book book) {
         this.book = book;
     }
 
@@ -72,4 +72,7 @@ public class Review {
                 ", body='" + body + '\'' +
                 '}';
     }
-    }
+
+
+
+}
