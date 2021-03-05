@@ -25,10 +25,10 @@ public class ReviewController {
 
 
 
-    @RequestMapping ("/reviews/{title}") //1
-    public String displaySingleBookReview (@PathVariable String title, Model model) {
+    @RequestMapping ("/review/{id}") //1
+    public String displaySingleBookReview (@PathVariable long id, Model model) {
 
-//        model.addAttribute("review", reviewStorage.getReviewByTitle(title)); //3
+      model.addAttribute("review", reviewStorage.getReviewById(id)); //3
 
         return "single-review"; //4
     }

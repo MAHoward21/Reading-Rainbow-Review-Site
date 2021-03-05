@@ -25,7 +25,7 @@ public class BookController {
 
     @RequestMapping("/books/{id}")
     public String displaySingleBook(@PathVariable Long id, Model model) {
-        model.addAttribute("review", reviewStorage.getReviewById(id));
+        //model.addAttribute("review", reviewStorage.getReviewById(id));
         model.addAttribute("book",  bookStorage.getBookById(id));
         return "Single book";
     }

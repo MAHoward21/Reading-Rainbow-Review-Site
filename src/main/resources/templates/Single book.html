@@ -11,10 +11,7 @@
 <div class="top__page">
     <header class="header">
         <h1 class="header__title">
-            <h2 th:text="${review.reviewTitle}">Head First Java</h2>
-<!--            <tr th:each="author : ${book.getAuthors()}">-->
-
-                <!--            Welcome to the <span th:text="${book.bookTitle}">Mystery</span> Section!-->
+            
         </h1>
         <img class="header__logo" src="./image/logo.png" />
 
@@ -39,7 +36,7 @@
     </header>
     <main>
         <ul th:each="review : ${book.reviews}">
-            <li th:href="'/review/' + ${review.id}"><span th:text="${review.reviewTitle}">Not a review</span></li>
+            <li><a th:href="'/review/' + ${review.id}"><span th:text="${review.reviewTitle}">Not a review</span></a></li>
         </ul>
 <!--        <ul th:each ="book: ${category.books}">-->
 <!--            <li><span th:text="${book.bookTitle}">Not a Book</span></li>-->

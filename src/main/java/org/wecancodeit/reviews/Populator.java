@@ -68,7 +68,7 @@ public class Populator implements CommandLineRunner {
         reviewStorage.addReview(harryPotterReview);
         harryPotter.addReview(harryPotterReview);
 
-        Review wheresSpotReview = new Review("Kids will like reading this book", "Jane Lee", "#", "kidsBooks", "amazing book");
+        Review wheresSpotReview = new Review("Kids will like reading this book", "Jane Lee", "#", "kidsBooks", "Another challenge to translate the magnificence of Shaun Tan’s book Dog. Throughout history and perhaps beyond, the deep and lasting friendship between Man and dogs has been documented for its authentic and unchanging relationship.");
         wheresSpotReview.addBook(wheresSpot);
 
         reviewStorage.addReview(wheresSpotReview);
