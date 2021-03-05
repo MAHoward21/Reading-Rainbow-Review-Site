@@ -2,6 +2,8 @@ package org.wecancodeit.reviews;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Entity
 public class Review {
@@ -13,13 +15,13 @@ public class Review {
     @ManyToOne
     private Book book;
 
-    public Book getBook() {
-        return book;
-    }
+    @ManyToMany
+    private Collection<Comment> comments = new ArrayList<>();
 
-    public void addBook(Book book) {
-        this.book = book;
-    }
+    @ManyToMany
+    private Collection<Hashtag> hashtags = new ArrayList<>();
+
+
 
     private String category;
     private String reviewTitle;
@@ -36,6 +38,14 @@ public class Review {
     }
 
     protected Review(){}
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void addBook(Book book) {
+        this.book = book;
+    }
 
     public long getId() {
         return id;
@@ -73,6 +83,11 @@ public class Review {
                 '}';
     }
 
-
+    public void addComment(Comment commentToAdd){
+        comments.add(commentToAdd);
+    }
+    public Collection<Comment> getComments() {
+        return comments;
+    }
 
 }

@@ -50,6 +50,18 @@
  </p>
 <!--    <a  th:href="'/category/'+${review.category.name}"-->
 <!--        href=" ./MYSTERY.html">Back to<span th:text="${review.category.name}">Mystery</span></a>-->
+
+<div>
+<form action="'/reveiw/' + ${review.id}" method="POST">
+    <label for="CommentBox">Submit a Comment</label>
+    <textarea type="text" id="CommentBox" name="CommentBox"></textarea>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+
+/
+
 </main>
 <footer><small>&copy2021</small></footer>
     </div>
