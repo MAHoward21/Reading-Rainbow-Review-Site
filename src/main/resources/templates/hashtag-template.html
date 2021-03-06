@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Hashtag Page</title>
-  <link rel="stylesheet" href="./css/homepage-style.css">
-  <link rel="stylesheet" href="./css/homepage-layout.css">
+  <link rel="stylesheet" href="/css/homepage-style.css">
+  <link rel="stylesheet" href="/css/homepage-layout.css">
 </head>
 <body>
 <div class="top__page">
@@ -13,13 +13,18 @@
     <h1 class="header__title">
       Welcome to the Hashtag Section!
     </h1>
-    <img class="header__logo" src="./image/logo.png" />
+    <img class="header__logo" src="/image/logo.png" />
   </header>
   <aside class="main__sidebar">
     <nav class="sidebar__navigation">
       <ul class="navigation__links">
-        <li class="navigation__link"><a href="./HOMEPAGE.html">Home</a></li>
+        <li class="navigation__link"><a href="/index.html">Home</a></li>
       </ul>
+      <script>
+        function goBack() {
+          window.history.back();
+        }
+        </script>
     </nav>
   </aside>
 </div>
