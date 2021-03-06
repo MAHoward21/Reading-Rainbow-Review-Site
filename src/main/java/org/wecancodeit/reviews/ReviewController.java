@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class ReviewController {
     private ReviewStorage reviewStorage;
+    private CommentStorage commentStorage;
     // 1. Provide mapping for methods
     // 2. Find the data for the View
     // 3. Add the data to the Model objects
     // 4. Select the template to be displayed
 
 
-    public ReviewController(ReviewStorage reviewStorage) {
-
-
+    public ReviewController(ReviewStorage reviewStorage, CommentStorage commentStorage) {
+        this.commentStorage = commentStorage;
         this.reviewStorage = reviewStorage;
         // 2 ^^
     }
@@ -35,11 +35,19 @@ public class ReviewController {
         return "single-review"; //4
     }
 
-    @PostMapping("/review/{id}")
-    public String addComment(@RequestParam String commentText, String authorText, @PathVariable long id) {
+    @PostMapping( "/review/{id}")
+    public String addComment(String commentText, String authorText, @PathVariable long id) {
         Comment commentToAdd = new Comment(commentText,authorText);
+        //commentToAdd.addReview(reviewStorage.getReviewById(id));
+        commentStorage.addComment(commentToAdd);
+        Review tempReview = reviewStorage.getReviewById(id);
+        tempReview.addComment(commentToAdd);
+        reviewStorage.addReview(tempReview);
+
+
+
         //reviewStorage.getReviewById();
-        return "redirect:/review/{id}";
+        return "redirect:/review/" + id;
     }
 
 }

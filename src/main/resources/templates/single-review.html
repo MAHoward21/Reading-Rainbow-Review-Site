@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title th:text="${review.reviewTitle}" > Sherlock Holmes Review Page</title>
-    <link rel="stylesheet" href="./css/sherlock-holmes-reveiw-page-style.css">
-    <link rel="stylesheet" href="./css/sherlock-holmes-review-page-layout.css">
+    <link rel="stylesheet" href="/css/sherlock-holmes-reveiw-page-style.css">
+    <link rel="stylesheet" href="/css/sherlock-holmes-review-page-layout.css">
 </head>
 <div class=container>
 
@@ -52,15 +52,27 @@
 <!--        href=" ./MYSTERY.html">Back to<span th:text="${review.category.name}">Mystery</span></a>-->
 
 <div>
-<form action="'/reveiw/' + ${review.id}" method="POST">
-    <label for="CommentBox">Submit a Comment</label>
-    <textarea type="text" id="CommentBox" name="CommentBox"></textarea>
+<form th:action="'/review/' + ${review.id}" method="POST">
+    <label for="commentText">Submit a Comment</label>
+    <label for="authorText"></label>
+    <input type="text" id="authorText"  name="authorText" placeholder="Your Name">
+    <textarea type="text" id="commentText" name="commentText"></textarea>
     <button type="submit">Submit</button>
 </form>
 </div>
+<div>
+    <ul class="comment-list" th:each= "comment : ${review.comments}">
+        <li  th:text="${comment.author}">
+            
+        </li>
+        <li th:text="${comment.comment}">
+
+        </li> 
+    </ul>
+</div>
 
 
-/
+
 
 </main>
 <footer><small>&copy2021</small></footer>
