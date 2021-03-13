@@ -73,25 +73,25 @@ public class Populator implements CommandLineRunner {
         commentStorage.addComment(rudeCommentOnWheresSpot);
         commentStorage.addComment(rudeCommentOnSidewalk);
 
-        Review harryPotterReview = new Review("This book is Good", "Jim Bob", "#", "fantasy", "This book is so good I laughed");
+        Review harryPotterReview = new Review("This book is Good", "Jim Bob", "#", /*"fantasy",*/ "This book is so good I laughed");
         harryPotterReview.addBook(harryPotter);
         harryPotterReview.addComment(rudeCommentOnHarryPotter);
         reviewStorage.addReview(harryPotterReview);
         harryPotter.addReview(harryPotterReview);
 
-        Review wheresSpotReview = new Review("Kids will like reading this book", "Jane Lee", "#", "kidsBooks", "Another challenge to translate the magnificence of Shaun Tan’s book Dog. Throughout history and perhaps beyond, the deep and lasting friendship between Man and dogs has been documented for its authentic and unchanging relationship.");
+        Review wheresSpotReview = new Review("Kids will like reading this book", "Jane Lee", "#", /*"kidsBooks",*/ "Another challenge to translate the magnificence of Shaun Tan’s book Dog. Throughout history and perhaps beyond, the deep and lasting friendship between Man and dogs has been documented for its authentic and unchanging relationship.");
         wheresSpotReview.addBook(wheresSpot);
         wheresSpotReview.addComment(rudeCommentOnWheresSpot);
         reviewStorage.addReview(wheresSpotReview);
         wheresSpot.addReview(wheresSpotReview);
 
-        Review nancyDrewReview = new Review("This book is great!", "Lee Bob", "#", "mystery", "My head still spinning from reading this book");
+        Review nancyDrewReview = new Review("This book is great!", "Lee Bob", "#", /*"mystery",*/ "My head still spinning from reading this book");
         nancyDrewReview.addBook(nancyDrew);
         nancyDrewReview.addComment(rudeCommentOnNancyDrew);
         reviewStorage.addReview(nancyDrewReview);
         nancyDrew.addReview(nancyDrewReview);
 
-        Review whereTheSideWalkEndsReview = new Review("such a pleasure to read this book!", "Jonny Bob", "#", "poetry", "Interesting book");
+        Review whereTheSideWalkEndsReview = new Review("such a pleasure to read this book!", "Jonny Bob", "#", /*"poetry",*/ "Interesting book");
         whereTheSideWalkEndsReview.addBook(whereTheSidewalkEnds);
         whereTheSideWalkEndsReview.addComment(rudeCommentOnSidewalk);
         reviewStorage.addReview(whereTheSideWalkEndsReview);
@@ -101,7 +101,7 @@ public class Populator implements CommandLineRunner {
 
 
     Review kidsBooksReview = new Review("Where is Spot Really?", "Tony Stark", "#",
-            "kidsBooks",  "This book has fun flaps to lift and lots of animals to name with you child. would suggest this book for colors and counting also.");
+            /*"kidsBooks",*/  "This book has fun flaps to lift and lots of animals to name with you child. would suggest this book for colors and counting also.");
     kidsBooksReview.addBook(wheresSpot);
     reviewStorage.addReview(kidsBooksReview);
     wheresSpot.addReview(kidsBooksReview);

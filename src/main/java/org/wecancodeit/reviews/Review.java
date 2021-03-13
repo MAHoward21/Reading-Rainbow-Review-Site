@@ -23,17 +23,17 @@ public class Review {
 
 
 
-    private String category;
+   // private String category;
     private String reviewTitle;
     private String reviewAuthor;
     private String reviewImage;
     private String body;
 
-    public Review(String reviewTitle, String reviewAuthor, String reviewImage, String category, String body) {
+    public Review(String reviewTitle, String reviewAuthor, String reviewImage, /*String category,*/ String body) {
         this.reviewTitle = reviewTitle;
         this.reviewAuthor = reviewAuthor;
         this.reviewImage = reviewImage;
-        this.category = category;
+       // this.category = category;
         this.body = body;
     }
 
@@ -63,9 +63,9 @@ public class Review {
         return reviewImage;
     }
 
-        public String getCategory () {
-        return category;
-    }
+        //public String getCategory () {
+//        return category;
+//    }
 
     public String getBody() {
         return body;
@@ -75,7 +75,7 @@ public class Review {
     public String toString() {
         return "Review{" +
                 "id=" + id +
-                ", category=" + category +
+                /*", category=" + category + */
                 ", reviewTitle='" + reviewTitle + '\'' +
                 ", reviewAuthor='" + reviewAuthor + '\'' +
                 ", reviewImage='" + reviewImage + '\'' +

@@ -15,7 +15,7 @@ public class HomeController {
     }
 
 
-    @RequestMapping ("/index.html")
+    @RequestMapping ("/")
     public String displayHomePage (Model model) {
         model.addAttribute("categories", categoryStorage.getAllCategories());
         return "Home-Template";
